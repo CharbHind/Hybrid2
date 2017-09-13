@@ -1,6 +1,6 @@
 {
   "name": "aweseome-places",
-  "app_id": "",
+  "app_id": "3dd931cf",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
