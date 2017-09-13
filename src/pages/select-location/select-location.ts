@@ -1,6 +1,7 @@
 import { Location } from './../../models/location';
 import { Component } from '@angular/core';
-import { IonicPage, NavParams, ViewController } from 'ionic-angular';
+import { NavParams, ViewController, IonicPage } from 'ionic-angular';
+
 @IonicPage()
 @Component({
   selector: 'page-select-location',

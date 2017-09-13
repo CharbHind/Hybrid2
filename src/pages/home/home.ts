@@ -1,16 +1,17 @@
-import { PlacePage } from './../place/place';
+// import { PlacePage } from './../place/place';
 import { PlacesService } from './../../services/places.services';
 import { Place } from './../../models/place';
-import { AddPlacePage } from './../add-place/add-place';
+// import { AddPlacePage } from './../add-place/add-place';
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from 'ionic-angular';
+import { ModalController, IonicPage } from 'ionic-angular';
 
+@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage implements OnInit {
-  addPlacePage = AddPlacePage;
+  addPlacePage = 'add-place';
   places: Place[] = [];
   constructor(public modalCtrl: ModalController,
     private placesService: PlacesService
@@ -26,7 +27,7 @@ export class HomePage implements OnInit {
     this.places = this.placesService.loadPlaces();
   }
   onOpenPlace(place: Place, index: number) {
-    const modal = this.modalCtrl.create(PlacePage, {
+    const modal = this.modalCtrl.create('PlacePage', {
       place: place
     });
     modal.present();
@@ -37,5 +38,7 @@ export class HomePage implements OnInit {
     );
 
   }
+
+
 
 }

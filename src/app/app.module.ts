@@ -1,8 +1,8 @@
 import { Camera } from '@ionic-native/camera';
 import { Geolocation } from '@ionic-native/geolocation';
-import { SelectLocationPage } from './../pages/select-location/select-location';
-import { PlacePage } from './../pages/place/place';
-import { AddPlacePage } from './../pages/add-place/add-place';
+// import { SelectLocationPage } from './../pages/select-location/select-location';
+// import { PlacePage } from './../pages/place/place';
+// import { AddPlacePage } from './../pages/add-place/add-place';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -13,16 +13,12 @@ import { File } from '@ionic-native/file';
 import { IonicStorageModule } from '@ionic/storage';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+// import { HomePage } from '../pages/home/home';
 import { PlacesService } from '../services/places.services';
 
 @NgModule({
   declarations: [
-    MyApp,
-    HomePage,
-    AddPlacePage,
-    PlacePage,
-    SelectLocationPage
+    MyApp
   ],
   imports: [
     BrowserModule,
@@ -34,11 +30,7 @@ import { PlacesService } from '../services/places.services';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    HomePage,
-    AddPlacePage,
-    PlacePage,
-    SelectLocationPage
+    MyApp
   ],
   providers: [
     StatusBar,
