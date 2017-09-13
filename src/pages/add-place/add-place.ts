@@ -2,7 +2,7 @@ import { Place } from './../../models/place';
 import { File, Entry } from '@ionic-native/file';
 import { PlacesService } from './../../services/places.services';
 import { Location } from './../../models/location';
-import { SelectLocationPage } from './../select-location/select-location';
+// import { SelectLocationPage } from './../select-location/select-location';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, ModalController, ToastController, LoadingController } from 'ionic-angular';
 import { NgForm } from "@angular/forms";
@@ -11,7 +11,9 @@ import { Camera } from '@ionic-native/camera';
 
 declare var cordova: any;
 
-@IonicPage()
+@IonicPage({
+  name: 'add-place'
+})
 @Component({
   selector: 'page-add-place',
   templateUrl: 'add-place.html',
@@ -63,7 +65,7 @@ export class AddPlacePage {
       );
   }
   onOpenMap() {
-    const modal = this.modalCtrl.create(SelectLocationPage, {
+    const modal = this.modalCtrl.create('SelectLocationPage', {
       location: this.location,
       isSet : this.locationChosen
     });
